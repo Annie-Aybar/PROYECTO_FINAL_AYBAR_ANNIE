@@ -1,0 +1,32 @@
+---
+title: "SEMANA06"
+author: "AYBAR CANCHARI"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 06
+
+1.- Primero seleccionamos el archivo que queremos limpiar, clic en From Text (reard
+
+2.- Clic en Browse para buscar el archivo lo seleccionas y solo copias esta parte del código y después clic en Import
+
+```{r}
+data<- ("E:/data<- read_csv1AA Canchari 2025/Downloads/s02_treat_artritis.csv")
+```
+
+3.- Después en la ventana Script pegas el código que copiamos pero le agregas el comando “data” y control + enter al final del código para asi poder ejecutarlo y seguidamente nos sale una nueva data en ventana de alado llamado “data".
+
+4.- Elegimos que columna de datos tiene datos perdidos (NA), yo elegiré la columna IMC y volvemos a la primera ventana de script para escribir el comando de limpieza para poder desapareces esos (NA)
+
+5.- Escribimos el comando para limpiar” data_limpia\<- data\[!is.na(data\$imc), \]” y control enter al final de todo
+
+```{r}
+data_limpia<- data[!is.na(data$Edad),]
+```
+
+6.- Se nos creara otra data en la ventana de alado que diga “data_limpia” lo abrimos y revisamos que los NA de la columna de IMC desaparecieron.
