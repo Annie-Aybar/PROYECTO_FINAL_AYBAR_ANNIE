@@ -1,0 +1,18 @@
+---
+title: "SEMANA02"
+author: "ANNIE_AYBAR_CANCHARI"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 02-"CREANDO PROYECTO"
+
+1.  Primero daremos Clic en “File”
+2.  Clic en New Project
+3.  Clic en New Director
+4.  Colocar nombre, y elegir donde guardarlo y clic en Create Project
+5.  Finalmente crearemos nuestro proyecto.
