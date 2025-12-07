@@ -1,0 +1,147 @@
+---
+title: "LRPD2"
+author: "ANNIE MELEN AYBAR"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 14
+
+1.Iniciamos con regresión univariada según el caso, redactando y definiendo con las variables, y datos con el que se trabajara en la relación
+
+CASO-3
+
+```{r}
+#Ingresar los datos
+IMC <- c(20,22,23,24,25,27,28,30,31,32,34,36)
+glucosa <- c(78,85,88,90,95,100,105,112,115,118,125,132)
+```
+
+2.Seguimos ejecutando “CTRL+ENTER” al final de cada código para ingresar los datos en conjunto con el ajuste un modelo de regresión lineal
+
+```{r}
+#Ajustar un modelo de regresión lineal
+datos <- data.frame(IMC, glucosa)
+```
+
+```{r}
+modelo <- lm(glucosa ~ IMC, data = datos)
+```
+
+```{r}
+summary(modelo)
+```
+
+3\. Luego, ejecutamos con “CTRL+ENTER” al final de cada código para
+graficar resultados: REGRESIÓN UNIVARIADA: Sirve para analizar
+una sola variable (frecuencias)
+
+```{r}
+# Graficar relación simple con presión
+plot(IMC, glucosa,
+     main = "Relación entre IMC y glucosa en ayunas",
+     xlab = "IMC (kg/m²)",
+     ylab = "Glucosa (mg/dL)",
+     pch = 19)
+abline(modelo, col="blue", lwd=2)
+```
+
+CASO-4
+
+4\. Siguiendo, comenzamos con regresión multivariada según el caso,
+redactando y definiendo con las variables, y datos con el que
+trabajaremos en la relación
+
+```{r}
+# DATOS
+IMC <- c(20,22,23,24,25,27,28,30,31,32,34,36)
+colesterol <- c(160,170,175,180,190,200,210,220,225,230,240,250)
+glucosa <- c(78,85,88,90,95,100,105,112,115,118,125,132)
+```
+
+```{r}
+# Crear dataframe
+datos <- data.frame(IMC, colesterol, glucosa)
+```
+
+5.Seguimos ejecutando con “CTRL+ENTER” al final de cada código para
+ingresar los datos en conjunto con la creación del modelo de regresión
+multiple
+
+```{r}
+# Modelo de regresión múltiple
+modelo <- lm(glucosa ~ IMC + colesterol, data = datos)
+```
+
+```{r}
+# Resumen del modelo
+summary(modelo)
+```
+
+6.Luego, ejecutamos con “CTRL+ENTER” al final de cada código Revisar
+diagnóstico del modelo y el gráfico simple con IMC y glucosa:
+REGESIÓN MULTIVARIADA: Sirve para analizar varias variables juntas, por
+ejemplo, correlaciones múltiples o regresiones con varias variables
+independientes.
+
+```{r}
+# opcional
+par(mfrow=c(2,2))
+plot(modelo)
+```
+
+```{r}
+# Graficar relación simple con presión
+plot(IMC, glucosa,
+     main="Glucosa vs IMC",
+     xlab="IMC",
+     ylab="Glucosa",
+     pch=19)
+abline(lm(glucosa ~ IMC), col="pink", lwd=2)
+```
+
+7.Finalmente, comenzamos con regresión lineal univariada según el caso,
+redactando y definiendo con las variables, y datos con el que trabajaremos
+en la relación
+
+```{r}
+# Datos 
+edad <- c(25,30,35,40,45,50,55,60,65,70,75,80) 
+dias <- c(2,3,4,4,5,6,7,7,8,9,9,10)
+```
+
+```{r}
+#Crear dataframe 
+datos <- data.frame(edad, dias)
+```
+
+8.Seguimos ejecutando con “CTRL+ENTER” al final de cada código para
+ingresar los datos en conjunto de la creación del dataframe y regresión lineal, y el resumen del modelo
+
+```{r}
+# Regresión lineal 
+modelo <- lm(dias ~ edad, data = datos)
+```
+
+```{r}
+# Resumen del modelo 
+summary(modelo)
+```
+
+9\. Por ultimo, ejecutamos con “CTRL+ENTER” al final de cada código para
+graficar resultados:
+REGRESIÓN LINEAL UNIVARIADO: La regresión lineal univariada es un
+modelo que busca explicar o predecir una sola variable usando una o más
+variables independientes
+
+```{r}
+# Gráfico 
+plot(edad, dias,     
+     main = "Relación entre edad y días hospitalizado",         xlab = "Edad del paciente",      
+     ylab = "Días hospitalizado")  
+abline(modelo, col="pink", lwd=2)
+```
