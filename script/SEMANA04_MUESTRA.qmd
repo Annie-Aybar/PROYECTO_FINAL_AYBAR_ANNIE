@@ -1,0 +1,27 @@
+---
+title: "SEMANA04"
+author: "AYBAR_CANCHARI_ANNIE"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+1.- Ingresaremos al link donde encontraremos el repositorio GIBHUB
+
+2.- Ingresaremos a la data y encontraremos todos los archivos y luego lo descargaremos en formato CSV
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
