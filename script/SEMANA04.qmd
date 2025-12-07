@@ -1,0 +1,22 @@
+---
+title: "SEMANA04"
+author: "AYBAR_CANCHARI_ANNIE"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 04
+
+1.- Ingresaremos al link donde encontraremos el repositorio GIBHUB
+
+2.- Ingresaremos a la data y encontraremos todos los archivos y luego lo descargaremos en formato CSV
+
+3.- Ingresas al archivo y le das en el simbolo de descarga
+
+En este caso fue como ejemplo "artritis".
+
+s02_treat_artritis_1\_ \<- read_csv("E:/1AA Canchari 2025/Downloads/s02_treat_artritis (1).csv")
