@@ -1,0 +1,25 @@
+---
+title: "SEMANA08"
+author: "AYBAR_CANCHARI"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 08
+
+1.- Nos dirigimos a la ventana inferior derecha y clic en Packages, luego clic en Install.
+
+2.- Buscamos el paquete que necesitamos para instalar, lo seleccionamos y damos click en Install.
+
+3.- Buscamos el paquete en la venta inferior de la derecha para activarlo dandole clic en el cuadro y que salga un check
+
+4.- Para crear un histograma primero subimos la base de datos y luego usamos este comando, el grafico lo podemos ver en la ventana inferior derecha
+
+```{r}
+ggplot(data.aes(x=edad))+geom_histogram(bins=30)+theme_minimal()
+
+```
