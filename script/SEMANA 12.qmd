@@ -1,0 +1,74 @@
+---
+title: "SEMANA_12"
+author: "AYBAR CANCHARI"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 12
+
+1\. Importamos la base de datos que usaremos de la que queremos hallar
+las medidas de disperción
+
+```{r}
+data <- read_csv("C:/Users/Asus/Downloads/s14_glucosa_circun.csv")
+```
+
+2.- Para conseguir la varianza usaremos el comando “var(data\$Nombre de la columna,na.rm = TRUE)” damos CTRL+ENTER y nos saldra el resultado en la ventana inferior
+
+```{r}
+var(data$edad)
+```
+
+3\. Para hallar la desviación standar escribimos el comando
+“sd(data\$edad,na.rm = TRUE)” damos CTRL+ENTER y el resultado
+automaticamente saldrá en la ventana inferior izquierda
+
+```{r}
+var(data$edad,na.rm = TRUE)
+```
+
+4\. Para hallar el rango escribimos el comando ”range(data\$edad,na.rm =
+TRUE)” damos CTRL+ENTER y el resultado automaticamente saldrá en
+la ventana inferior izquierda
+
+```{r}
+range(data$edad,na,rm = TRUE)
+```
+
+5\. Para hallar el rango intercuartilico escribimos el comando
+“IQR(data\$edad,na.rm = TRUE)” damos CTRL+ENTER y el resultado
+automaticamente saldrá en la ventana inferior izquierda
+
+```{r}
+IQR(data$edad,na.rm = TRUE)
+
+```
+
+6\. Para hallar el cuartil escribimos el comando “IQR(data\$edad,na.rm =
+TRUE)” damos CTRL+ENTER y el resultado automaticamente saldrá en
+la ventana inferior izquierda
+
+```{r}
+quantile(data$edad)
+```
+
+7\. Para visualizar las 6 primeras filas escribimos el comando “head(data)”
+damos CRTL+ENTER y el resultado automaticamente saldrá en la
+ventana inferior izquierda
+
+```{r}
+head(data)
+```
+
+8\. Para visualizar todos los datos de dichas medidas escribimos el
+commando “summary(data)” damos CTRL+ENTER y el resultado
+automaticamente saldrá en la ventana inferior izquierda
+
+```{r}
+summary(data)
+```
