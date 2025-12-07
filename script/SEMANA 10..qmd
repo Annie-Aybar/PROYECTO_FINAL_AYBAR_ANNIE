@@ -1,0 +1,38 @@
+---
+title: "SEMANA10"
+author: "AYBAR CANCHARI"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 10
+
+1\. Primero importamos los la base de datos del cual queremos las medidas de tendencia central
+
+```{r}
+data <- read_csv("C:/Users/Asus/Downloads/s14_glucosa_circun.csv")
+```
+
+2\. Usamos el comando “mean (data\$ nombre de la columna)” le damos control + enter para ejecutar y poder encontrar la media aritmética, podemos ver le
+resultado en la ventana inferior
+
+```{r}
+mean(data$edad)
+```
+
+3\. Usamos el comando “median (data\$nombre de la columna)” lo ejecutamos y obtendremos la mediana, podemos ver el resultado en la ventana inferior
+
+```{r}
+median(data$edad)
+```
+
+4\. Usamos el comando “mode_edad\<-names(sort(table(data\$nombre de la
+columna),decreasing = TRUE))\[1\]” ejecutamos para encontrar la moda, podemos ver el resultado en la ventana superior derecha
+
+```{r}
+mode_edad<-names(sort(table)(data$edad), decreasing = TRUE))
+```
